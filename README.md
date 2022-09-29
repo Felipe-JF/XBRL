@@ -1,2 +1,3 @@
 # XBRL
  
+deno task start
