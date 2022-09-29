@@ -118,13 +118,13 @@ const element: Element = {
 
 const validTags = ["hello", "alo"] as const;
 
+const isValid = validate(element, validTags);
+
 const references = collectIds(element, new Map());
 
 console.log({ references });
 
 validateReferences(element, references);
-
-const isValid = validate(element, validTags);
 
 const xml = generateXmlElement(element);
 
