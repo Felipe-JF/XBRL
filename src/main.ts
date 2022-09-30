@@ -5,6 +5,8 @@ type Element = {
   children?: readonly Element[];
 };
 
+type Node = {};
+
 function Element<E extends Element>(element: E): E {
   return element;
 }
