@@ -5,7 +5,12 @@ type Element = {
   children?: readonly Element[];
 };
 
-type Node = {};
+type Node = {
+  meta: {
+    type: string;
+  };
+  children: readonly Node[];
+};
 
 function Element<E extends Element>(element: E): E {
   return element;
