@@ -4,10 +4,7 @@ type RawCSV = readonly string[][];
 
 type ParsedCSV<T extends string> = Record<T, string>[];
 
-function parse<T extends string>(
-  keys: T[],
-  csv: RawCSV,
-): ParsedCSV<T> {
+function parse<T extends string>(keys: T[], csv: RawCSV): ParsedCSV<T> {
   const [head, ...tail] = csv;
 
   assertEquals(keys, head as T[]);
@@ -40,9 +37,14 @@ L12312312123,1100,20
 L2393823489,800,40
 `;
 
-console.log(parse(["loan_id", "loan_amount", "provision_amount"], [
-  ["loan_id", "loan_amount", "provision_amount"],
-  ["L9209384832", "1000", "100"],
-  ["L12312312123", "1100", "20"],
-  ["L2393823489", "800", "40"],
-]));
+console.log(
+  parse(
+    ["loan_id", "loan_amount", "provision_amount"],
+    [
+      ["loan_id", "loan_amount", "provision_amount"],
+      ["L9209384832", "1000", "100"],
+      ["L12312312123", "1100", "20"],
+      ["L2393823489", "800", "40"],
+    ]
+  )
+);

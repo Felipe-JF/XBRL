@@ -106,18 +106,24 @@ const element: Element = {
   children: [
     {
       tag: "hello",
-      id: "referencia importante",
+      id: "salarios",
       children: [
         {
           tag: "hello",
           id: "sub referencia importante",
-          children: [],
+          children: [
+            {
+              tag: "hello",
+              id: "sub referencia importante",
+              children: [],
+            },
+          ],
         },
       ],
     },
     {
       tag: "hell",
-      data: "sub referencia importante",
+      data: "salariosasdas",
       children: [],
     },
   ],

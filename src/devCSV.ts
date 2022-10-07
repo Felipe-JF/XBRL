@@ -5,3 +5,7 @@ const file = await Deno.readTextFile("./static/exemplo.csv");
 const content = parse(file);
 
 console.log(content);
+
+await new Promise((resolve) => {
+  setTimeout(resolve, 10000);
+});
